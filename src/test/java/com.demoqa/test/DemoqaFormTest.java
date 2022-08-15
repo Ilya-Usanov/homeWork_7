@@ -12,6 +12,9 @@ public class DemoqaFormTest {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
     TestData testData = new TestData();
 
+    public DemoqaFormTest() {
+    }
+
     @BeforeAll
     static void configure() {
         Configuration.browserSize = "1920x1080";

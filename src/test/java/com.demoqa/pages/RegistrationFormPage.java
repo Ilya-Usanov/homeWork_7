@@ -70,11 +70,11 @@ public class RegistrationFormPage {
     }
 
     public void fillsDateOfBirth(TestData testData) {
-        calendarComponent.setDate(String.valueOf(testData.dateOfBirth));
+        calendarComponent.setDate(String.valueOf(testData.updateDateOfBirth));
     }
 
     public void fillsSubjects(TestData testData) {
-        subjects.setValue(testData.subjects);
+        subjects.setValue(testData.subjects).pressEnter();
     }
 
     public void fillsHobbies(TestData testData) {
@@ -122,7 +122,7 @@ public class RegistrationFormPage {
         getEmail.shouldHave(text(testData.email));
         getGender.shouldHave(text(testData.gender));
         getMobile.shouldHave(text(testData.mobile));
-        getDateOfBirth.shouldHave(text(testData.dateOfBirth));
+        getDateOfBirth.shouldHave(text(testData.updateDateOfBirth));
         getSubjects.shouldHave(text(testData.subjects));
         getHobbies.shouldHave(text(testData.strHobbies));
         getPicture.shouldHave(text(testData.picture));
